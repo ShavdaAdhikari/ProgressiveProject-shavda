@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-24T16:29:47 EST" name="Default suite" finished-at="2021-01-24T16:31:37 EST" duration-ms="110171">
+    <groups>
+    </groups>
+    <test started-at="2021-01-24T16:29:47 EST" name="Default test" finished-at="2021-01-24T16:31:37 EST" duration-ms="110171">
+      <class name="com.progressiveProjectTestcases.TestingArea">
+        <test-method is-config="true" signature="titleCheck()[pri:0, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:29:47 EST" name="titleCheck" finished-at="2021-01-24T16:29:59 EST" duration-ms="11812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleCheck -->
+        <test-method signature="verifyHomePage()[pri:0, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:29:59 EST" name="verifyHomePage" finished-at="2021-01-24T16:29:59 EST" duration-ms="525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method signature="onlyAutoHomepage()[pri:1, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:30:00 EST" name="onlyAutoHomepage" finished-at="2021-01-24T16:30:03 EST" duration-ms="3852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onlyAutoHomepage -->
+        <test-method signature="personalInformationForstartQuote()[pri:3, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:30:03 EST" name="personalInformationForstartQuote" finished-at="2021-01-24T16:30:23 EST" duration-ms="19928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- personalInformationForstartQuote -->
+        <test-method signature="vehiclesInformation()[pri:5, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:30:23 EST" name="vehiclesInformation" finished-at="2021-01-24T16:30:51 EST" duration-ms="27614" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equals(Object)" because "ids" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "ids" is null
+at com.progressiveInsurance.TellUsAboutVehicle.garageAddress(TellUsAboutVehicle.java:197)
+at com.progressiveProjectTestcases.TestingArea.vehiclesInformation(TestingArea.java:208)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vehiclesInformation -->
+        <test-method signature="moreInformationAboutOwner()[pri:6, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:30:51 EST" name="moreInformationAboutOwner" finished-at="2021-01-24T16:31:20 EST" duration-ms="28888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moreInformationAboutOwner -->
+        <test-method signature="previousInsuranceInformation()[pri:9, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:31:20 EST" name="previousInsuranceInformation" finished-at="2021-01-24T16:31:30 EST" duration-ms="10468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- previousInsuranceInformation -->
+        <test-method signature="Nothanksauto()[pri:14, instance:com.progressiveProjectTestcases.TestingArea@4de4b452]" started-at="2021-01-24T16:31:30 EST" name="Nothanksauto" finished-at="2021-01-24T16:31:37 EST" duration-ms="6942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Nothanksauto -->
+      </class> <!-- com.progressiveProjectTestcases.TestingArea -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -16,26 +16,26 @@ public class TellUsAboutVehicle {
 	WebDriver driver;
 	
 	
-	@FindBy(id ="VehiclesNew_embedded_questions_list_GaragingSameAsMailingAddress_Y")
-	WebElement garageZip;
+	//@FindBy(id ="VehiclesNew_embedded_questions_list_GaragingSameAsMailingAddress_Y")
+	//WebElement garageZip;
 	
 	By yearOfVehicle=By.xpath("//li[@class='ng-star-inserted']");
+	By bodyType=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_BodyStyle']//option");
+	By optionOfUse=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_VehicleUse']//option");
+	//By garageAddress=By.xpath("//input[@type='radio']");
+	
 	
 	By removeVehicle=By.xpath("//navigation-button[@class='white remove ng-tns-c179-20 ng-star-inserted']");
 	
-	By orByvin=By.xpath("//a[@ng-class='enter-by-vin-class']");
+    By orByvin=By.xpath("//a[@ng-class='enter-by-vin-class']");
 	
 	By addAnother=By.xpath("//a [contains(@class ,'clickable add')]");
-	By bodyType=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_BodyStyle']//option");
 	
-	//By bodyType=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_BodyStyle']");
-	
-	By optionOfUse=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_VehicleUse']//option");
 	
 	By rideShare=By.xpath("//input[@id='VehiclesNew_embedded_questions_list_VehicleTransportNetworkCompanyIndicator']");
 	
-	//By zipquestion=By.xpath("//input[@id='VehiclesNew_embedded_questions_list_GaragingZip']");
-	By zipquestion=By.xpath("//input[@type='tel' and @autocorrect='off']");
+	By zipquestion=By.xpath("//input[@id='VehiclesNew_embedded_questions_list_GaragingZip']");
+	//By zipquestion=By.xpath("//input[@type='tel' and @autocorrect='off']");
 	By leaseOrown=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_OwnOrLease']//option");
 	
 	By durationOfOwnership=By.xpath("//select[@id='VehiclesNew_embedded_questions_list_LengthOfOwnership']//option");
@@ -60,7 +60,11 @@ public class TellUsAboutVehicle {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+//	public void selectyear(String year) {
+//		WebElement element=driver.findElement(yearOfVehicle);
+//		Select select =new Select(element);
+//		select.selectByVisibleText(year);
+//	}
 
 	public void selectYearOfVehicle(String madeyear) {
 		List<WebElement>listCar=driver.findElements(yearOfVehicle);
@@ -76,44 +80,6 @@ public class TellUsAboutVehicle {
 		}
 	
 	
-public void madeByVehicle(String Vehicle_Made_By ) {
-		List<WebElement>listCar=driver.findElements(yearOfVehicle);
-		 for(int i=0;i<listCar.size();i++) {
-			
-			WebElement element=listCar.get(i);
-			
-		if(element.getText().equals(Vehicle_Made_By)) {
-			
-			element.click();
-			break;}
-			}
-		 }
-	
-	
-	
-   public void modelofVehicle(String Vehicle_M0del ) {
-	List<WebElement>listCar=driver.findElements(yearOfVehicle);
-	 
-	for(int i=0;i<listCar.size();i++) {
-		WebElement element=listCar.get(i);
-		
-	if(element.getText().equals(Vehicle_M0del)) {
-		element.click();
-		break;
-	}
-		}}
-
-   public void  Remove() {
-	   WebElement removeButton=driver.findElement(removeVehicle);
-	   removeButton.click();
-   }
-   
-   
-    public void orChooseByVin() {
-	   WebElement orvinButton=driver.findElement(orByvin);
-	   //orvinButton.click();
-	   orvinButton.sendKeys(Keys.TAB);
-   }
     public void madeByBodytype( String bodyTpe ) {
 		List<WebElement>listCar=driver.findElements(bodyType);
 		 for(int i=0;i<listCar.size();i++) {
@@ -126,14 +92,6 @@ public void madeByVehicle(String Vehicle_Made_By ) {
 			break;}
 			}
 		 }
-   
-//   public void enterBodyType(int index) {
-//		WebElement element=driver.findElement(bodyType);
-//		Select select1=new Select(element);
-//		select1.selectByIndex(index);
-//
-//	}
-    
     
     public void usetype( String bodyTpe ) {
 		List<WebElement>listCar=driver.findElements(optionOfUse);
@@ -146,12 +104,47 @@ public void madeByVehicle(String Vehicle_Made_By ) {
 			element.click();
 			break;}
 			}
-		 }
-	
+		 } public void leeseOrOwn( String choose ) {
+				List<WebElement>listCar=driver.findElements(leaseOrown);
+				 for(int i=0;i<listCar.size();i++) {
+					
+					WebElement element=listCar.get(i);
+					
+				if(element.getText().equals(choose)) {
+					
+					element.click();
+					break;}
+					}
+				 }
+    
+    
+   
+////   public void enterBodyType(int index) {
+////		WebElement element=driver.findElement(bodyType);
+////		Select select1=new Select(element);
+////		select1.selectByIndex(index);
+////
+////	}
+    
+
+//    public void  Remove() {
+// 	   WebElement removeButton=driver.findElement(removeVehicle);
+// 	   removeButton.click();
+//    }
+//    
+//    
+//     public void orChooseByVin() {
+// 	   WebElement orvinButton=driver.findElement(orByvin);
+// 	   //orvinButton.click();
+// 	   orvinButton.sendKeys(Keys.TAB);
+//    }
+////    
+//    
+  
 //   public void purposeOFUse(int index) {
-//		WebElement element=driver.findElement(optionOfUse);
-//		Select select2=new Select(element);
-//		select2.selectByIndex(index);
+//	WebElement element=driver.findElement(optionOfUse);
+//	Select select2=new Select(element);
+//	select2.selectByIndex(index);
 //
 //	}
    
@@ -173,28 +166,7 @@ public void madeByVehicle(String Vehicle_Made_By ) {
 //
 //	}
   
-   public void leeseOrOwn( String choose ) {
-		List<WebElement>listCar=driver.findElements(leaseOrown);
-		 for(int i=0;i<listCar.size();i++) {
-			
-			WebElement element=listCar.get(i);
-			
-		if(element.getText().equals(choose)) {
-			
-			element.click();
-			break;}
-			}
-		 }
 
-   
-   
-   
-//   public void lengthofOwnership(int index) {
-//		WebElement eleeementss=driver.findElement(durationOfOwnership);
-//		Select seeelects2=new Select(eleeementss);
-//		seeelects2.selectByIndex(index);
-//
-//	}
    public void lengthofOwnership(String length) {
 		List<WebElement>listCar=driver.findElements(durationOfOwnership);
 		 for(int i=0;i<listCar.size();i++) 
@@ -232,7 +204,7 @@ public void madeByVehicle(String Vehicle_Made_By ) {
    
    
   // public void garageAddress() {
-	//   garageZip.click();
+	//  garageZip.click();
   // }
    
 //   public void primaryGarageAddress() {
