@@ -16,9 +16,9 @@ import org.openqa.selenium.support.ui.Select;
 		WebDriver driver;
 		
 		By radioButton =By.xpath("//input[@type='radio']");
-		//
+		
 //			By maritalStatus=By.xpath("//select[@id='DriversAddPniDetails_embedded_questions_list_MaritalStatus']//option");
-		//
+		
 //			By female =By.xpath("//input[@type='radio' and @value ='F']");
 		//
 //			By education=By.xpath("//select[@id='DriversAddPniDetails_embedded_questions_list_HighestLevelOfEducation']//option");
