@@ -2,7 +2,7 @@ package com.progressiveInsurance;
 
 
 	
-	import java.util.List;
+
 
 	import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 		
 		WebDriver driver;
 		
-		By radioButton =By.xpath("//input[@type='radio']");
+	
 		//
 //			By maritalStatus=By.xpath("//select[@id='DriversAddPniDetails_embedded_questions_list_MaritalStatus']//option");
 		//
