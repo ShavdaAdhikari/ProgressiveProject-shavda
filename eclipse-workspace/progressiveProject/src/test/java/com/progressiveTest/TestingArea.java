@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,8 +17,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.progressiveInsurance.AutoPage;
+import com.progressiveInsurance.DriversPage;
 import com.progressiveInsurance.HomePage;
-import com.progressiveInsurance.MoreAboutOwnersInformation;
+//import com.progressiveInsurance.MoreAboutOwnersInformation;
 import com.progressiveInsurance.NoThankSnapShot;
 import com.progressiveInsurance.StartQuotePage;
 import com.progressiveInsurance.TellUsAboutPreviousInsurence;
@@ -128,10 +130,10 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 		letStart.DateOfBirth("11","12","1991");
 		Thread.sleep(2000);
 		letStart.streeeeeeeeet("3351 cove lake Dr ");
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		
 	     //letStart.Apteeeeeeeeet();
 	    //letStart.P_O_Boxno();
-		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+		Thread.sleep(2000);  
 		letStart.OkStartQuoteButton();
 		Thread.sleep(2000);   
 		
@@ -164,20 +166,20 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 		
 		
 	//	about.orByVin();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		about.madeByBodytype("SUV (4CYL 4X2)");
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		about.usetype("Personal (to/from work or school, errands, pleasure)");
 		Thread.sleep(1000);
 		about.rideSharing();
 		Thread.sleep(2000);
 		//about.primaryZip();
-		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+		
 		
 		about.leeseOrOwn("Own");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		Thread.sleep(2000);
 		
 		about.lengthofOwnership("1 month - 1 year");
@@ -185,15 +187,24 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 		about.primaryGarageAddress();
 	    Thread.sleep(2000);
 		about.emergencyBrakeAssistSystem();
-		Thread.sleep(1000);
-		about.blindAssistSystem();
+		//Thread.sleep(1000);
+		//about.blindAssistSystem();
+		//Thread.sleep(2000);
+		
+		Thread.sleep(6000);
+		about.Done();
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		//about.doneAndClickButton("Done");
-		about.doneButton();
-        Thread.sleep(4000);
-		//about.doneAndClickButton("Continue");
-		about.continueButtom();
-		Thread.sleep(4000);
+		about.Continue();
+		
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+//		//about.doneAndClickButton("Done");
+//		about.doneButton();
+//        Thread.sleep(4000);
+//		//about.doneAndClickButton("Continue");
+//		about.continueButtom();
+		Thread.sleep(6000);
 		}catch(Exception e) {
 			e.getStackTrace();
 		}
@@ -211,46 +222,45 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 		extent.attachReporter(htmlReporter);
 		ExtentTest test6 =extent.createTest("Owners Information");
 		test6.info("Sometimes the Social security box may didplay or not IF THE SSN ELEMENT IS DISPLAY THE FLOW RUN SMOOTHLY OTHERWISE THE TEST FAILS");
-	MoreAboutOwnersInformation ownersinformation=new MoreAboutOwnersInformation(driver);
-	ownersinformation.radioButtons("DriversAddPniDetails_embedded_questions_list_Gender_M");
+	//MoreAboutOwnersInformation ownersinformation=new MoreAboutOwnersInformation(driver);
+	//ownersinformation.radioButtons("DriversAddPniDetails_embedded_questions_list_Gender_M");
 	try {
-	Thread.sleep(3000);
-	ownersinformation.marital_status("Single");
-	Thread.sleep(2000);
-	ownersinformation.education_status("Graduate work or graduate degree");
-	Thread.sleep(2000);
-	ownersinformation.employment_status("Not working/Other");
-
-	//ownersinformation.socialSecurityNo("694122345");
-	Thread.sleep(2000);
-	ownersinformation.resident_status("Own home");
-	Thread.sleep(2000);
-	ownersinformation.Outside_Move_Status("No");
-	Thread.sleep(2000);
-
-	ownersinformation.License_Year("3 years or more");
-	Thread.sleep(2000);
-	ownersinformation.radioButtons("DriversAddPniDetails_embedded_questions_list_MilitaryStatus_N");
-	driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-	ownersinformation.radioButtons("DriversAddPniDetails_embedded_questions_list_HasAccidentsOrClaims_N");
-	driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-	ownersinformation.radioButtons("DriversAddPniDetails_embedded_questions_list_HasTicketsOrViolations_N");
-	Thread.sleep(2000);
-	TellUsAboutVehicle about = new TellUsAboutVehicle(driver);
-	about.doneAndClickButton("Continue");
-	Thread.sleep(4000);
-	about.doneAndClickButton("Continue");
-	Thread.sleep(4000);
-	about.doneAndClickButton("Continue");
-	driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-	Thread.sleep(4000);}
-	catch(Exception e) {
-	e.getStackTrace();
-	e.getMessage();
+		
+		
+		DriversPage Form4 = new DriversPage(driver);
+		
+		Form4.SelectGender();
+		Thread.sleep(2000);
+		Form4.MaritialStatus(1);
+		Thread.sleep(2000);
+		Form4.Educationlevel(3);
+		Thread.sleep(2000);
+		Form4.EmploymentStatus(2);
+		Thread.sleep(2000);
+		//ProgressiveForm4.SocialSecurity("456-789-1234");
+		//Thread.sleep(2000);
+		Form4.PrimaryResidence(1);
+		Thread.sleep(2000);
+		Form4.MoveClickOption(1);
+		Thread.sleep(2000);
+		Form4.LicencedYears("3 years or more");
+		Thread.sleep(2000);
+		Form4.AccidentalClaims();
+		Thread.sleep(2000);
+		Form4.TicketsOrViolations();
+		Thread.sleep(2000);
+		Form4.ContinuePage();
+		Thread.sleep(4000);
+		Form4.ContinuePage();
+		 Thread.sleep(5000);
+		 Form4.ContinuePage();
+		 Thread.sleep(5000);
+			}catch(Exception e) {
+			e.printStackTrace();
+			 e.getCause();
+			  e.getMessage();
+		}
 	}
-	//extent.flush();
-	}
-	
 
 	
 	@Test(priority=9)
@@ -263,14 +273,12 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 		
 		TellUsAboutPreviousInsurence info=new TellUsAboutPreviousInsurence(driver);
 		
-		MoreAboutOwnersInformation ownersinformation=new MoreAboutOwnersInformation(driver);
-       //TellUsAboutVehicle about = new TellUsAboutVehicle(driver);
+	 Thread.sleep(2000);
+      info.radioButtons("FinalDetailsEdit_embedded_questions_list_InsuranceToday_N");
        Thread.sleep(2000);
-       ownersinformation.radioButtons("FinalDetailsEdit_embedded_questions_list_InsuranceToday_N");
+       info.radioButtons("FinalDetailsEdit_embedded_questions_list_InsuranceLastMonth_N");
        Thread.sleep(2000);
-       ownersinformation.radioButtons("FinalDetailsEdit_embedded_questions_list_InsuranceLastMonth_N");
-       Thread.sleep(2000);
-        ownersinformation.radioButtons("FinalDetailsEdit_embedded_questions_list_OtherPolicies_N");
+        info.radioButtons("FinalDetailsEdit_embedded_questions_list_OtherPolicies_N");
         Thread.sleep(2000);
 		info.emailAndPolicyStartDate("abc@gmail.com");
         Thread.sleep(3000);
@@ -306,6 +314,11 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
      	info.clickbutton();
      	Thread.sleep(4000);
         shot.no_Thanks_Just_Auto();
+	Thread.sleep(5000);
+	  ScreenShot shots=new ScreenShot();
+         shots.takeSnapShot(driver, "Progressive last Page");
+         Thread.sleep(2000);
+	
 
 		
 	}
@@ -315,9 +328,9 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_Progressive
 	public  void terminateBrowser() {
 		try{
 			
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 		  ScreenShot shot=new ScreenShot();
-	         shot.takeSnapShot(driver, "Progressive last Page");
+	         shot.takeSnapShot(driver, "Progressive last Page afterTest");
 		
 		driver.close();
 		driver.quit();

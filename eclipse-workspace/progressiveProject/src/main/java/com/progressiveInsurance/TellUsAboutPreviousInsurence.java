@@ -9,7 +9,8 @@ package com.progressiveInsurance;
 	
 	
 	
-	import java.util.concurrent.TimeUnit;
+	import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.Keys;
@@ -28,6 +29,7 @@ package com.progressiveInsurance;
 	 
 	 @FindBy(xpath="//loading-button[@data-automation-id='forwardNavigation']")
 		WebElement clickbu;
+	 By radioButton =By.xpath("//input[@type='radio']");
 
 		 public TellUsAboutPreviousInsurence (WebDriver driver) {
 			this.driver=driver;
@@ -76,7 +78,19 @@ package com.progressiveInsurance;
 
 		
 		
-		
+	public void radioButtons(String buttonclick) {
+		List<WebElement>listbutton=driver.findElements(radioButton);
+		 for(int i=0;i<listbutton.size();i++) 
+		 {
+			WebElement element=listbutton.get(i);
+			
+			String ids=element.getAttribute("id");
+		if(ids.equals(buttonclick)) {
+			
+			element.click();
+			break;}
+		}
+		}
 		
 		
 		

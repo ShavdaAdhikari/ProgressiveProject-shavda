@@ -29,10 +29,44 @@ public class ScreenShot {
 		}catch(Exception e) {
 		e.getStackTrace();
 		}
-		}}
+		}
 
 
 
+//	public void takeScreenShot( WebDriver driver, String screenShotName) {
+//		
+//	
+//	
+//	File src=(TakeScreenshot)driver).getScreenshotAs
+//	
+//	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 

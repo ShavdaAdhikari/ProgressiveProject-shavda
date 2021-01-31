@@ -14,7 +14,6 @@ package com.google;
 
 	public class HomePageGoogle {
 		
-		
 		public WebDriver driver;
 		
 		

@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -61,7 +62,7 @@ ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("extentReport_google.html
 		
 		//Assert.assertTrue(homePage.IsPageOpened());
 		//take snapshot
-		screenShot.takeSnapShot(driver, "GoogleHomepage");
+		//screenShot.takeSnapShot(driver, "GoogleHomepage");
 		
 			
 			

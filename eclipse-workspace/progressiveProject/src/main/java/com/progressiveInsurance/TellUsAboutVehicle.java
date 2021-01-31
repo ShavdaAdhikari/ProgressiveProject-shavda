@@ -40,7 +40,7 @@ package com.progressiveInsurance;
 		
 		By equippedWithAnti_thief=By.xpath("//input[@id='VehiclesNew_embedded_questions_list_AntitheftQualifyingDevice_Y']");
 		
-		
+		By primaryusebutton = By.xpath("//select[@analytics-id='VehiclesNew_VehicleUse']");
 		By garageAddress=By.xpath("(//input[@type='radio' and @value='Y'])[1]");
 		
 		By emergencyBraking=By.xpath("(//input[@type='radio' and @value='Y'])[2]");
@@ -54,6 +54,12 @@ package com.progressiveInsurance;
 		By buttondone=By.xpath("//button[text()='Done']");
 		By buttonContinue=By.xpath("//button[text()='Continue']");
 		By contibutton=By.xpath("(//loading-button[@data-automation-id='forwardNavigation'])[2]");
+		
+		By doneclick = By.xpath("(//loading-button[@data-automation-id='forwardNavigation'])[1]");
+		By continueclick=By.xpath("//loading-button[@data-automation-id='forwardNavigation']");
+		
+		
+		
 		public TellUsAboutVehicle(WebDriver driver) {
 			
 			this.driver=driver;
@@ -193,14 +199,14 @@ package com.progressiveInsurance;
 				break;}
 			}
 			}
-	    public void doneButton() {
-			   WebElement add2=driver.findElement(donebutton);
-			   add2.click();
-		   }
-	    public void continueButtom() {
-			   WebElement add4=driver.findElement( contibutton);
-			   add4.click();
-		   }
+//	    public void doneButton() {
+//			   WebElement add2=driver.findElement(donebutton);
+//			   add2.click();
+//		   }
+//	    public void continueButtom() {
+//			   WebElement add4=driver.findElement( contibutton);
+//			   add4.click();
+//		   }
 			
 
 		
@@ -210,7 +216,14 @@ package com.progressiveInsurance;
 	   }
 		
 		
-		
+	   public void Done() {
+			WebElement element = driver.findElement(doneclick);
+			  element.click();
+					}
+			public void Continue() {
+				WebElement element = driver.findElement(continueclick);
+				  element.click();
+			}
 		
 		
 		
